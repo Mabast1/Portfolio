@@ -12,7 +12,18 @@ const Work = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [works, setWorks] = useState([]);
   const [filterWork, setFilterWork] = useState([]);
-  const handleWorkFilter = (item) => {};
+  const handleWorkFilter = (item) => {
+    setActiveFilter(item);
+    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setTimeout(() => {
+      setAnimateCard([{ y: 0, opacity: 1 }]);
+      if (item === "All") {
+        setFilterWork(works);
+      } else {
+        setFilterWork(works.filter((work) => work.tags.includes(item)));
+      }
+    }, 500);
+  };
 
   useEffect(() => {
     const query = '*[_type == "works"]';
@@ -84,7 +95,9 @@ const Work = () => {
               </motion.div>
             </div>
             <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
+              <a href={work.projectLink} target="_blank" rel="noreferrer">
+                <h4 className="bold-text">{work.title}</h4>
+              </a>
               <p className="p-text" style={{ marginTop: 10 }}>
                 {work.description}
               </p>
