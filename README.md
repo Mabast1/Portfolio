@@ -69,5 +69,4 @@ ReactDOM.render(<App/>, document.getElementById('root'));
     }, []);
 
 8.  we map over the items within the sanity db:
-
 <div>{anyname.map((name, index) => (<div>{name.title}</div>))}</div>
