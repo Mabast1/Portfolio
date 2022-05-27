@@ -64,7 +64,7 @@ const Footer = () => {
           <div className="app__flex">
             <input
               className="p-text"
-              name={name}
+              name="name"
               type="text"
               placeholder="Your Name"
               value={name}
@@ -86,7 +86,7 @@ const Footer = () => {
               className="p-text"
               placeholder="Your Message"
               value={message}
-              name={message}
+              name="message"
               onChange={handleChangeInput}
             />
           </div>
@@ -98,7 +98,6 @@ const Footer = () => {
       ) : (
         <div>
           <h3 className="head-text">
-            {" "}
             Thank you for your message, I will be in touch soon!
           </h3>
         </div>
