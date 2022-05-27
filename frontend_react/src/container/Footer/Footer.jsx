@@ -43,7 +43,9 @@ const Footer = () => {
 
   return (
     <>
-      <h2 className="head-text">Grab a cup of coffe & chat with me</h2>
+      <h2 className="head-text">
+        Grab a cup of coffe & <span>chat with me</span>
+      </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
           <img src={images.email} alt="email" />
@@ -96,10 +98,9 @@ const Footer = () => {
           </button>
         </div>
       ) : (
-        <div>
-          <h3 className="head-text">
-            Thank you for your message, I will be in touch soon!
-          </h3>
+        <div className="success">
+          <h3>Thank you for your message, I will be in touch soon!</h3>
+          <p>🎉</p>
         </div>
       )}
     </>
