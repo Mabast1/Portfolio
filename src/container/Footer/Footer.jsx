@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { runFireworks } from "../../lib/utils";
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { client } from "../../client";
@@ -38,6 +39,7 @@ const Footer = () => {
     client.create(contact).then(() => {
       setLoading(false);
       setIsFormSubmitted(true);
+      runFireworks();
     });
   };
 
