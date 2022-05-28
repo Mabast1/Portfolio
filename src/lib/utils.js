@@ -1,5 +1,6 @@
 import confetti from "canvas-confetti";
 
+//example from https://github.com/catdad/canvas-confetti#readme
 export const runFireworks = () => {
   var duration = 4 * 1000;
   var animationEnd = Date.now() + duration;
