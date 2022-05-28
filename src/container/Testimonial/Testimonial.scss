@@ -5,7 +5,7 @@
 }
 
 .app__testimonial-item {
-  width: 60%;
+  width: 70%;
   min-height: 320px;
   background-color: var(--white-color);
 
@@ -53,7 +53,7 @@
   align-items: flex-start;
 
   p {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 2rem;
     font-family: var(--font-base);
   }
@@ -88,8 +88,8 @@
     transition: all 0.3s ease-in-out;
 
     svg {
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       color: var(--secondary-color);
     }
 
@@ -97,7 +97,7 @@
       background-color: var(--secondary-color);
 
       svg {
-        background-color: var(--white-color);
+        color: var(--white-color);
       }
     }
   }
