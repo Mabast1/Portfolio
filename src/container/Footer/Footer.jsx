@@ -46,7 +46,7 @@ const Footer = () => {
   return (
     <>
       <h2 className="head-text">
-        Grab a cup of coffe & <span>chat with me</span>
+        Grab a cup of coffee & <span>chat with me</span>
       </h2>
       <div className="app__footer-cards">
         <div className="app__footer-card">
