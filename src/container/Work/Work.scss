@@ -7,7 +7,7 @@
 .app__work-filter {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
@@ -51,6 +51,7 @@
 
   .app__work-item {
     width: 270px;
+    height: 430px;
     flex-direction: column;
     margin: 2rem;
     padding: 1rem;
@@ -139,6 +140,12 @@
   flex-direction: column;
   a {
     text-decoration: none;
+  }
+
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 120px;
   }
 
   h4 {
