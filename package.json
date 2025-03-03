@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "preinstall": "apt-get update && apt-get install -y python3-distutils",
+    "preinstall": "python3 -m ensurepip && pip install distutils",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
