@@ -1,4 +1,6 @@
 import React, { useRef } from "react";
+import { motion } from "framer-motion";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { images } from "../../constants";
@@ -25,7 +27,11 @@ const OctoTEK = () => {
   };
 
   return (
-    <section className="hero__area">
+    <motion.div
+      whileInView={{ opacity: [0, 1] }}
+      transition={{ duration: 0.9 }}
+      className="hero__area"
+    >
       <div className="logo_container">
         <img src={images.octotek} alt="octotek_logo" width="80" />
       </div>
@@ -39,7 +45,11 @@ const OctoTEK = () => {
                   <FontAwesomeIcon icon={faArrowRight} />
                 </span>
               </a>
-              <div className="hero__title-wrapper">
+              <motion.div
+                whileInView={{ opacity: [0, 1] }}
+                transition={{ duration: 0.5 }}
+                className="hero__title-wrapper"
+              >
                 <h1 className="hero__title">Your Ideas, Our Reality</h1>
                 <p className="hero__sub-title">
                   At <span>OctoTEK</span>, we transform dreams into code and{" "}
@@ -49,7 +59,7 @@ const OctoTEK = () => {
                   drive <span>growth</span> and redefine possibilities. Reach
                   out today, and let’s build the future <span>together</span>.
                 </p>
-              </div>
+              </motion.div>
               <div className="btn-wrapper">
                 <a
                   href="https://octotek.io/contact"
@@ -80,7 +90,7 @@ const OctoTEK = () => {
         src={images.octotekbg}
         className="hero1_bg"
       />
-    </section>
+    </motion.div>
   );
 };
 

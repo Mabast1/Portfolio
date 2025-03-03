@@ -6,6 +6,8 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import "./Skills.scss";
+import { images } from "../../constants";
+import { width } from "@fortawesome/free-solid-svg-icons/fa0";
 
 const Skills = () => {
   const [experiences, setExperience] = useState([]);
@@ -49,7 +51,46 @@ const Skills = () => {
           ))}
         </motion.div>
         <motion.div className="app__skills-exp">
-          {experiences?.map((experience) => (
+          <div className="linkedin-badge">
+            <a
+              href="https://www.linkedin.com/in/mabast/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="badge-link"
+            >
+              <div className="badge-content">
+                <div className="profile-photo-container">
+                  <img
+                    src={images.profile} // Replace with the actual profile photo URL
+                    alt="Profile"
+                    className="profile-photo"
+                  />
+                </div>
+                <div className="profile-info">
+                  <p className="profile-calltoacation">
+                    Visit my linkedin to view more
+                  </p>
+                  <h3 className="profile-name">Mabast Ahmad</h3>
+                  <p className="profile-headline">
+                    Entrepreneur | Director of Technology | Full Stack Software
+                    Engineer | Tech Consultant | Driving Innovation, Engagement
+                    & User-Centric Solutions @OctoTEK.io🚀
+                  </p>
+                  <p className="profile-location">Houston, TX</p>
+                </div>
+              </div>
+              <div className="linkedin-logo">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M19 0H5a5 5 0 00-5 5v14a5 5 0 005 5h14a5 5 0 005-5V5a5 5 0 00-5-5zM8 19H5V8h3v11zM6.5 6.732c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.784 1.764-1.75 1.764zM20 19h-3v-5.604c0-3.368-4-3.113-4 0V19h-3V8h3v1.765c1.396-2.586 7-2.777 7 2.476V19z" />
+                </svg>
+              </div>
+            </a>
+          </div>
+          {/* {experiences?.map((experience) => (
             <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
@@ -80,7 +121,7 @@ const Skills = () => {
                 ))}
               </motion.div>
             </motion.div>
-          ))}
+          ))} */}
         </motion.div>
       </div>
     </>
